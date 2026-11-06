@@ -744,6 +744,103 @@
             background: linear-gradient(0deg, rgba(0, 0, 0, .78), transparent);
         }
 
+        /* About: coach profile + certificates */
+        .coach {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: clamp(24px, 4vw, 56px);
+            align-items: start;
+        }
+
+        .section-head .coach-name {
+            color: var(--text);
+            font-weight: 800;
+            font-size: 1.1875rem;
+        }
+
+        .coach-role {
+            margin-bottom: 16px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .coach-bio p + p {
+            margin-top: 14px;
+        }
+
+        .coach-bio p {
+            color: var(--text-2);
+        }
+
+        .coach-bio .coach-role {
+            color: var(--accent);
+        }
+
+        .coach-facts {
+            list-style: none;
+            display: grid;
+            gap: 10px;
+        }
+
+        .coach-facts li {
+            padding: 12px 16px;
+            border: 1px solid var(--line);
+            border-left: 3px solid var(--accent);
+            border-radius: var(--r-sm);
+            background: var(--surface);
+            color: var(--text-2);
+            font-size: .9375rem;
+        }
+
+        .coach-facts strong {
+            color: var(--text);
+        }
+
+        .coach-bio .coach-quote {
+            margin-top: 22px;
+            font-size: .8125rem;
+            font-weight: 600;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .certs {
+            display: flex;
+            gap: 16px;
+            align-items: stretch;
+            margin-top: clamp(28px, 4vw, 48px);
+        }
+
+        .shot.cert {
+            flex: 1 1 0;
+            width: auto;
+            height: auto;
+            background: #fff;
+        }
+
+        .shot.cert--wide {
+            flex-grow: 1.46;
+        }
+
+        .shot.cert--tall {
+            flex-grow: .69;
+        }
+
+        .shot.cert img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .shot.cert .cap {
+            position: static;
+            display: block;
+            padding: 12px 16px;
+            background: var(--surface);
+            color: #fff;
+        }
+
         /* Lightbox */
         .lightbox {
             width: 100vw;
@@ -1585,6 +1682,10 @@
         }
 
         @media (max-width: 860px) {
+            .coach {
+                grid-template-columns: 1fr;
+            }
+
             .locations {
                 grid-template-columns: 1fr;
             }
@@ -1794,6 +1895,16 @@
         }
 
         @media (max-width: 560px) {
+            .certs {
+                flex-direction: column;
+            }
+
+            .shot.cert {
+                flex: none;
+                width: 100%;
+            }
+
+
             .brand-name {
                 display: none;
             }
