@@ -820,11 +820,11 @@
         }
 
         .shot.cert--wide {
-            flex-grow: 1.46;
+            flex-grow: 1.4056;
         }
 
         .shot.cert--tall {
-            flex-grow: .69;
+            flex-grow: .6863;
         }
 
         .shot.cert img {
@@ -833,12 +833,15 @@
             height: auto;
         }
 
+        /* Caption kept for the lightbox, hidden on the card so the certificate stays clear */
         .shot.cert .cap {
-            position: static;
-            display: block;
-            padding: 12px 16px;
-            background: var(--surface);
-            color: #fff;
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
         }
 
         /* Lightbox */
